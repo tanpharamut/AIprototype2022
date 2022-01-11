@@ -1,16 +1,24 @@
-import argparse #สำหรับรับ input จากภายนอก
-import subprocess #สำหรับ run terminal command
+import argparse #สำหรับ รับ input จากภายนอก
+import subprocess #สำหรับรัน terminal command 
 
-#import flask #สำหรับทำ Webapp เเละ Web service api
-
+#import flask # สำหรับทำ web app และ web service api
 
 
 def print_other():
-        print('somthing else')
+    print('something else')
 
+if _name__=="__main_":
+    parser = argparse.ArgumentParser(description='test program to learn about argparse ')
+    parser.add_argument(
+        'x',
+        help='value of x')
+    parser.add_argument(
+        '--yval',
+        type=int,
+        default=3,
+        help='value of y')
+    args = parser.parse_args()
 
-if __name__ == "__main__":
-        x = 2
-        y = 3
-        print(f'calculate {x} x {y} = {x*y}')
-        
+    x = args.x
+    y = args.yval
+    print(f'calculate {x} x {y} = {x*y}')
