@@ -18,4 +18,4 @@ if __name__== "__main__":
      stdout=subprocess.PIPE, stderr=subprocess.PIPE)
      out, err = process.communicate()
      text = str(out, "utf-8")
-     print(text[24:26])
+     print(text[24:24])
