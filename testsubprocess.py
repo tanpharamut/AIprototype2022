@@ -16,6 +16,5 @@ if __name__== "__main__":
     for i in [2,5,6,8]:
         process = subprocess.Popen(["python", "pyhon_script_101.py", "2", "--x", f"{i}", "--yval", "2",]
         ,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        out, err = process.communicate()
-        text = str(out)
+        str(out), err = process.communicate()
         print(out)
