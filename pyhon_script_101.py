@@ -22,7 +22,6 @@ if __name__=="__main_":
     parser.add_argument(
         '--yval',
         type=int,
-        default=3,
         help='value of y')
 
     args = parser.parse_args()
