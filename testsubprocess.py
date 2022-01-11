@@ -17,5 +17,5 @@ if __name__== "__main__":
         process = subprocess.Popen(["python", "pyhon_script_101.py", "2", "--x", f"{i}", "--yval", "2",]
         ,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         out, err = process.communicate()
-        text = str(out, 'utf-8')
+        text = str(out)
         print(out[2])
