@@ -13,5 +13,7 @@ if __name__== "__main__":
 
 
     ##HW ให้ print เฉพาะ ตัวเลขผลลัพธ์การคูณ
-    ##for i in [2,5,6,9]:
-    ##    subprocess.run(["python", "pyhon_script_101.py", "8", "--x", f"{i}", "--yval", "8"])
+    for i in [2,5,6,9]:
+        process = subprocess.run(["python", "pyhon_script_101.py", "8", "--x", f"{i}", "--yval", "8"],stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        out, err = process.communicate()
+        print(out)
