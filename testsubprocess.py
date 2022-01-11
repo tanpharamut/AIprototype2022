@@ -18,4 +18,5 @@ if __name__== "__main__":
      stdout=subprocess.PIPE, stderr=subprocess.PIPE)
      out, err = process.communicate()
      text = str(out, "utf-8")
+     text = text.rstrip("\n")
      print(text[23:26])
