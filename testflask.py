@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask, request, render_template 
 import json
 
 app = Flask(__name__)
 
 @app.route("/")
-def home():
+def helloworld():
     return "Hello, World!"
     
 @app.route("/name")
@@ -26,7 +26,7 @@ def request_detail():
 ##webapp
 @app.route("/home")
 def home():
-    return render_template("home.html")
+    return render_template("home.html",name='Tan')
 
 if __name__ == "__main__":
     app.run()#host=0.0.0.0,port=5001
