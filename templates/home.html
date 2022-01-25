@@ -7,7 +7,34 @@
   <body>
     <h1> My First Try Using Flask </h1>
     <p> Flask is Fun </p>
-    <h2 style="color: red;"> Hello, {{name}}! </h2>
-    <h3> {{2**5}}</h3>
+    <h2 style="color: red;"> Hello, {{name}} </h2>
+    <h3 style="color: green;"> {{ratio}} </h3>
+    <h4> {{2**5}}</h4>
+
+    <form action="{{ url_for('home')}}" method="post">
+
+      <label for="firstname">First Name:</label>
+
+      <input type="text" id="firstname" name="fname" placeholder="firstname">
+
+      <label for="lastname">Last Name:</label>
+
+      <input type="text" id="lastname" name="lname" placeholder="lastname">
+
+      <button type="submit">Login</button>
+    </form>
+    
+    <p>Choose your 3Dcar:</p>
+
+    <form action="{{ url_for('home2')}}" method="post">
+      <input type="radio" id="3Dpickup" name="3Dcar" value="3Dpickup" >
+      <label for="3Dpickup">3Dpickup</label><br>
+      <input type="radio" id="3Dsedan" name="3Dcar" value="3Dsedan" >
+      <label for="3Dsedan">3Dsedan</label><br>
+      <input type="radio" id="3Dtruck" name="3Dcar" value="3Dtruck" >
+      <label for="3Dtruck">3Dtruck</label><br>
+      <button type="submit">Submit</button>
+    </form>
+
   </body>
 </html>
