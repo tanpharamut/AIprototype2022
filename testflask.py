@@ -1,6 +1,8 @@
 from crypt import methods
+from re import T
+import pandas as pd
 from unittest import result
-from flask import Flask, request, render_template 
+from flask import Flask, request, render_template, make_response
 import json
 
 app = Flask(__name__)
@@ -28,14 +30,29 @@ def request_detail():
 ##webapp
 @app.route("/home", methods = ['POST','GET'])
 def home():
+
     if request.method == "POST":
+        dbpd = pd.read_csv('db.csv')
        # getting input with name = fname in HTML form
         first_name = request.form.get("fname")
        # getting input with name = lname in HTML form 
         last_name = request.form.get("lname") 
-        return render_template("home.html",name = f"{first_name} {last_name}")
 
-    return render_template("home.html",name = 'Tan')
+        dbpd = dbpd.append({'name': first_name,'lastname' : last_name}, ingnore_index=True)
+        dbpd.to_csv('db.csv',index=True)
+
+        resp = make_response(render_template("home.html",name = f"{first_name} {last_name}"))
+        resp.set_cookie('firstname', first_name)
+
+        return resp
+
+    if request.method == "GET" :
+        getval = request.args
+        print(getval)
+        print(getval.get("name"))
+
+    return render_template("home.html",name = 'Tan', fav="")
+
 
 @app.route("/home2", methods = ['POST','GET'])
 def home2():
@@ -44,6 +61,6 @@ def home2():
         return render_template("home.html", ratio = f"{ratio_choice}")
 
     return render_template("home.html", ratio= '99th')
-    
+
 if __name__ == "__main__":
     app.run()#host=0.0.0.0,port=5001
