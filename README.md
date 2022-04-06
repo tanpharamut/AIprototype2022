@@ -2,15 +2,15 @@
 > นาย ปรมัตถ์ มากเจริญ 613021016-5
 -------------------------------
 ## การติดตั้ง git เพื่อใช้งานคำสั่ง git
-   conda install git
+   * conda install git
 
 ## การใช้งาน package git
-   git status    ตรวจสอบสถานะของไฟล์ทั้งหมดในgit
-   git clone     ดาวน์โหลด github ที่ต้องการ
-   git pull      ดึงไฟล์ล่าสุดทั้งหมดบน github 
-   git add       เลือกไฟล์ที่ต้องการเข้า github
-   git commit -m เพื่อคอมเมนท์ข้อความ
-   git push      อัพไฟล์ที่เลือกเข้า github
+   * git status    ตรวจสอบสถานะของไฟล์ทั้งหมดในgit
+   * git clone     ดาวน์โหลด github ที่ต้องการ
+   * git pull      ดึงไฟล์ล่าสุดทั้งหมดบน github 
+   * git add       เลือกไฟล์ที่ต้องการเข้า github
+   * git commit -m เพื่อคอมเมนท์ข้อความ
+   * git push      อัพไฟล์ที่เลือกเข้า github
 --------------------------------
 ## เนื้อหาในคอร์สเรียน
 * ## Argparse subprocess + Python scrip
