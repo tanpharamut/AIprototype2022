@@ -1,12 +1,23 @@
 # AIprototype2022 
 > นาย ปรมัตถ์ มากเจริญ 613021016-5
 -------------------------------
+## การติดตั้ง git เพื่อใช้งานคำสั่ง git
+    conda install git
 
+## การใช้งาน package git
+    git status    ตรวจสอบสถานะของไฟล์ทั้งหมดในgit
+    git clone     ดาวน์โหลด github ที่ต้องการ
+    git pull      ดึงไฟล์ล่าสุดทั้งหมดบน github 
+    git add       เลือกไฟล์ที่ต้องการเข้า github
+    git commit -m เพื่อคอมเมนท์ข้อความ
+    git push      อัพไฟล์ที่เลือกเข้า github
+--------------------------------
+## เนื้อหาในคอร์สเรียน
 * ## Argparse subprocess + Python scrip
   * ### Test Subprocess file : [[code]](https://github.com/tanpharamut/AIprototype2022/blob/main/testsubprocess.py)
   * ### Python script file : [[code]](https://github.com/tanpharamut/AIprototype2022/blob/main/pyhon_script_101.py)
 
-* ## Flask: Web App + Web Service (Cookie, File Picker, HTTP GET, use Pandas as Database )
+* ## Flask: Web App + Web Service (Cookie, File Picker, HTTP GET)
   * ### Test flask file : [[code]](https://github.com/tanpharamut/AIprototype2022/blob/main/testflask.py)
   * ### Home .html file : [[code]](https://github.com/tanpharamut/AIprototype2022/blob/main/templates/home.html)
 * ## Requests [[code]](https://github.com/tanpharamut/AIprototype2022/blob/main/postrequests.py)
